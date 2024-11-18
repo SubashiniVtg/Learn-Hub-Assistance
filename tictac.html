@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/images.jpeg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/tictac.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <p class="m-0 fw-bold" style="font-size: 25px;">Learn Hub<span
+                    style="color: #37AFE1;"> Assistance</span></p>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            style="border: none;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="login.html" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                <a href="#" class="nav-item nav-link">
+                    <div id="google_translate_element"></div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+   <!-- tic tac toee -->
+   <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+
+   <div id="main">
+    <h1>TIC TAC TOE</h1>
+    <p id="ins">
+          Game starts by just Tap on
+        box<br><br>First Player starts as
+        <b>Player X </b>And Second Player as 
+        <b>Player 0</b>
+    </p>
+    <br><br>
+    <div class = "ui">
+        <div class="row">
+            <input type="text" id= "b1" 
+                   class="cell" onclick="myfunc_3(); myfunc();" 
+                   readonly>
+            <input type="text" id= "b2" 
+                   class="cell" onclick="myfunc_4(); myfunc();" 
+                   readonly>
+            <input type="text" id= "b3" class="cell" 
+                   onclick="myfunc_5(); myfunc();" 
+                   readonly>
+        </div>
+        <div class="row">
+            <input type="text" id= "b4" 
+                   class="cell" onclick="myfunc_6(); myfunc();" 
+                   readonly>
+            <input type="text" id= "b5" 
+                   class="cell" onclick="myfunc_7(); myfunc();" 
+                   readonly>
+            <input type="text" id= "b6" 
+                   class="cell" onclick="myfunc_8(); myfunc();" 
+                   readonly>
+        </div>
+        <div class="row">
+            <input type="text" id= "b7" 
+                   class="cell" onclick="myfunc_9(); myfunc();" 
+                   readonly>
+            <input type="text" id= "b8" 
+                   class="cell" onclick="myfunc_10();myfunc();" 
+                   readonly>
+            <input type="text" id= "b9" 
+                   class="cell" onclick="myfunc_11();myfunc();" 
+                   readonly>
+        </div>
+    </div>
+    <br><br><br>
+  
+    <button id="but" onclick="myfunc_2()">
+        RESET
+    </button>
+    <br><br>
+    <p id="print"></p>
+</div>
+</div>
+</div>
+</div>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siqdce5bb84290fa7945f96124d6eebf6dc64669db000f92b69deae1df9b76710e6" defer></script>
+    <script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siqdce5bb84290fa7945f96124d6eebf6dc64669db000f92b69deae1df9b76710e6", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+</body>
+
+</html>
